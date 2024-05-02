@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heart Attack</title>
+</head>
+<body style="background: #000;">
+	<div class="login">
+		<h1 style="color: violet;">Heart Attack</h1>
+
+		<form action="{{ url_for('predict')}}" method="post">
+			<input type="text" name="age" placeholder="Your age" required="required"/><br>
+			<input type="text" name="sex" placeholder="Your sex" required="required"/><br>
+			<input type="text" name="cp" placeholder="Your cp" required="required"/><br>
+			<input type="text" name="trtbps" placeholder="Your trtbps" required="required"/><br>
+			<input type="text" name="chol" placeholder="Your chol" required="required"/><br>
+			<input type="text" name="fbs" placeholder="Your fbs" required="required"/><br>
+			<input type="text" name="restecg" placeholder="Your restecg" required="required"/><br>
+			<input type="text" name="thalachh" placeholder="Your thalachh" required="required"/><br>
+			<input type="text" name="exng" placeholder="Your exng" required="required"/><br>
+			<input type="text" name="oldpeak" placeholder="Your oldpeak" required="required"/><br>
+			<input type="text" name="slp" placeholder="Your slp" required="required"/><br>
+			<input type="text" name="caa" placeholder="Your caa" required="required"/><br>
+			<input type="text" name="thall" placeholder="Your thall" required="required"/><p>
+
+			<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></p> 
+
+		</form>
+
+		<br>
+		<br>
+		<br>
+		<h4 style="color:violet;"> {{prediction_text}} </h4>
+	</div>
+</body>
+</html>
